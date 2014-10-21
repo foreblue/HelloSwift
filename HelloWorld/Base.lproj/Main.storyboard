@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6250" systemVersion="14A389" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="vXZ-lx-hvc">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6244"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
-                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="vXZ-lx-hvc" customClass="ViewController" customModule="HelloWorld" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="jyV-Pf-zRb"/>
                         <viewControllerLayoutGuide type="bottom" id="2fi-mo-0CV"/>
@@ -15,8 +16,68 @@
                     <view key="view" contentMode="scaleToFill" id="kh9-bI-dsS">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pBW-vo-qCm">
+                                <rect key="frame" x="16" y="556" width="30" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="SLx-kz-Qzo"/>
+                                    <constraint firstAttribute="width" constant="52" id="dEl-j2-GRq"/>
+                                </constraints>
+                                <state key="normal" title="Play">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickPlayButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="6fN-db-Reg"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="O7k-0Z-jiD">
+                                <rect key="frame" x="32" y="20" width="42" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GCg-AK-dah">
+                                <rect key="frame" x="544" y="556" width="46" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="43T-0r-d50"/>
+                                    <constraint firstAttribute="width" constant="46" id="E2j-l7-Wga"/>
+                                </constraints>
+                                <state key="normal" title="Button">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickStopButton:" destination="vXZ-lx-hvc" eventType="touchUpInside" id="ek5-SW-4gR"/>
+                                </connections>
+                            </button>
+                            <slider opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="shk-mA-iGa">
+                                <rect key="frame" x="87" y="556" width="427" height="31"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="ljy-JK-49y"/>
+                                </constraints>
+                            </slider>
+                            <stepper opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" maximumValue="1" stepValue="0.10000000000000001" translatesAutoresizingMaskIntoConstraints="NO" id="Ua4-Gt-3RA">
+                                <rect key="frame" x="102" y="16" width="94" height="29"/>
+                                <connections>
+                                    <action selector="clickVolumeStepper:" destination="vXZ-lx-hvc" eventType="valueChanged" id="UCw-z1-bjs"/>
+                                </connections>
+                            </stepper>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="pBW-vo-qCm" secondAttribute="bottom" constant="14" id="4IF-jO-ylw"/>
+                            <constraint firstItem="pBW-vo-qCm" firstAttribute="leading" secondItem="kh9-bI-dsS" secondAttribute="leadingMargin" constant="20" id="Fqx-7l-n8T"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="GCg-AK-dah" secondAttribute="bottom" constant="14" id="QUk-Jw-2My"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="GCg-AK-dah" secondAttribute="trailing" constant="20" id="TCq-A4-HuU"/>
+                            <constraint firstItem="shk-mA-iGa" firstAttribute="leading" secondItem="pBW-vo-qCm" secondAttribute="trailing" constant="8" id="XDW-Ld-igQ"/>
+                            <constraint firstItem="GCg-AK-dah" firstAttribute="leading" secondItem="shk-mA-iGa" secondAttribute="trailing" constant="8" id="sXY-fz-6Cf"/>
+                            <constraint firstItem="2fi-mo-0CV" firstAttribute="top" secondItem="shk-mA-iGa" secondAttribute="bottom" constant="14" id="xFq-7C-hJm"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="progressSlider" destination="shk-mA-iGa" id="B4F-j4-CBB"/>
+                        <outlet property="volumeLabel" destination="O7k-0Z-jiD" id="plN-mt-PXG"/>
+                        <outlet property="volumeStepper" destination="Ua4-Gt-3RA" id="yVj-52-6gO"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>

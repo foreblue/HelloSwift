@@ -13,6 +13,7 @@
 		8C50CD4119F603030028CE18 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8C50CD4019F603030028CE18 /* Images.xcassets */; };
 		8C50CD4419F603030028CE18 /* LaunchScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8C50CD4219F603030028CE18 /* LaunchScreen.xib */; };
 		8C50CD5019F603030028CE18 /* HelloWorldTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8C50CD4F19F603030028CE18 /* HelloWorldTests.swift */; };
+		8C50CD5A19F60C010028CE18 /* demo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 8C50CD5919F60C010028CE18 /* demo.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,6 +37,7 @@
 		8C50CD4919F603030028CE18 /* HelloWorldTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = HelloWorldTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		8C50CD4E19F603030028CE18 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8C50CD4F19F603030028CE18 /* HelloWorldTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloWorldTests.swift; sourceTree = "<group>"; };
+		8C50CD5919F60C010028CE18 /* demo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = demo.mp3; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 		8C50CD2B19F603030028CE18 = {
 			isa = PBXGroup;
 			children = (
+				8C50CD5919F60C010028CE18 /* demo.mp3 */,
 				8C50CD3619F603030028CE18 /* HelloWorld */,
 				8C50CD4C19F603030028CE18 /* HelloWorldTests */,
 				8C50CD3519F603030028CE18 /* Products */,
@@ -195,6 +198,7 @@
 				8C50CD3F19F603030028CE18 /* Main.storyboard in Resources */,
 				8C50CD4419F603030028CE18 /* LaunchScreen.xib in Resources */,
 				8C50CD4119F603030028CE18 /* Images.xcassets in Resources */,
+				8C50CD5A19F60C010028CE18 /* demo.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -405,6 +409,7 @@
 				8C50CD5519F603030028CE18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		8C50CD5619F603030028CE18 /* Build configuration list for PBXNativeTarget "HelloWorldTests" */ = {
 			isa = XCConfigurationList;
@@ -413,6 +418,7 @@
 				8C50CD5819F603030028CE18 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
